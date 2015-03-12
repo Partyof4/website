@@ -40,7 +40,7 @@ class Views::Layouts::Raw < Views::Base
             section(class: "top-bar-section") {
               ul(class: "right") {
                 li(class: "active") {
-                  a(href: take_action_path) {
+                  a(href: profile_path) {
                     text "Create a profile"
                   }
                 }

@@ -9,7 +9,7 @@ class Views::LoggedOut::Index < Views::Base
         }
         h4 "Recently Relocated? Let us make some introductions."
 
-        p "We match people (and their partners) with others who are nearby & have similar interests."
+        p "We match people and their partners with others who are nearby & have similar interests."
         p "It's 2015. The Internet's not just for dating anymore..."
 
         render partial: "take_action_button"

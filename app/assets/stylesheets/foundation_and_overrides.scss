@@ -1572,7 +1572,12 @@ i { margin: 5px }
   width: rem-calc(90);
   height: auto;
   padding: $topbar-height/6 0 $topbar-height/5 0;
+  margin-right: 15px;
   max-height: $topbar-height;
+}
+
+.title-area a {
+  @extend %chunko-text;
 }
 
 .background-cover {
