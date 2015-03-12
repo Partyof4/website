@@ -4,8 +4,8 @@ class Views::LoggedOut::TakeAction < Views::Base
       form {
 
         div(class: %[clear-panel form]) {
-          h4 "Take Action"
-          p "Answering a few questions will help us decide whether to get in touch with you!"
+          h4 "Create a Profile"
+          p "Answering a few quick questions will help us match you with like minded couples in your area!"
           div(class: "row") {
             div(class: "medium-6 columns") {
               label {
@@ -28,14 +28,62 @@ class Views::LoggedOut::TakeAction < Views::Base
               }
             }
           }
-          p "This information will not be shared"
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "Where do you live?"
+                input(type: "text", placeholder: "Seattle")
+              }
+            }
+          }
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "When did you arrive?"
+                input(type: "text", placeholder: "March of 2014")
+              }
+            }
+          }
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "How old were you when you moved?"
+                input(type: "text", placeholder: "42")
+              }
+            }
+          }
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "What did you do this past weeked?"
+                textarea(placeholder: "Watched Netflix, Played Backgammon, Shopped for Wine...")
+              }
+            }
+          }
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "Name 5 things you and/or your partner cannot live without"
+                textarea(placeholder: "Jazz, Craft Beer, Library Card, Seahawks ...")
+              }
+            }
+          }
+          div(class: "row") {
+            div(class: "medium-12 columns") {
+              label {
+                text "Any deal breakers?"
+                textarea(placeholder: "Politics, Mediterranean food, 49ers fans...")
+              }
+            }
+          }
+          p "This information will be kept private and your email will not be shared."
         }
         div(class: "text-center") {
           br
           render partial: "activation_button"
         }
-        p(class: "white-text"){
-         text "After you create your profile you will be contacted by a concierge to setup your first event!"
+        p(class: "white-text") {
+          text "After you create your profile you will be contacted by a concierge to setup your first event!"
         }
       }
     }
