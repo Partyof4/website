@@ -1,19 +1,10 @@
-Citizen Rails Template
+Party of 4
 ====
 This project is for jumpstarting Client and Citizen projects under the included MIT license. Feel free to license the client project or your own project as you see fit.
 
 There is not intent to make this a public project. But consider it sour dough for for friends, family, and clients.
 
-Customize this project for your app
-===================================
-
-1. Search all files in the project for "citizen" and "Citizen" and change the name to match the project you're starting, including the database names in `config/database.yml`.
-1. The site can be password-protected while in alpha. Edit `config/application.rb` and customize `config.site_username` and `config.site_password` for the site, and enable password-protection by setting `config.require_site_login = true`.
-1. You can create a whitelist of emails which will automatically become admins when they sign up. Add these emails to `config/automatically_admins.yml`.
-1. Remove the `LICENSE` file from the root directory.
-1. Delete this section. You only need to do these steps once.
-
-Local development setup (without Docker)
+Local development setup
 =========================================
 
 1. Install [Postgres.app](http://postgresapp.com).
@@ -34,38 +25,6 @@ Local development setup (without Docker)
 1. Launch the server with `foreman start` and see it running at http://localhost:3000
 
 1. To run tests, see Tools section below.
-
-Local development setup (with Docker & Fig)
-======================================
-
-1. Install docker http://docs.docker.com/installation/mac/
-  a. By default boot2docker will create a VM that uses 2GB of memory.  If this is too much for your machine, use
-
-    boot2docker init -m 512
-
-1. Install fig http://www.fig.sh/install.html
-1. Configure
-    map `boot2docker ip` to localdocker in /etc/hosts
-1. Build image
-
-    fig build
-
-1. Create database
-
-    fig run web db:setup db:test:prepare
-
-1. Run db and web servers
-
-    fig up
-
-1. Develop code on your local machine.  It will be updated in the image.
-  a. Open localdocker:3000 to see changes
-  a. If you change the Dockerfile or the Gemfile, stop fig, then re-run
-     `fig build` and `fig up`.
-1. To run tests, see Tools section below.  Prefix all commands with
-   `fig run web`
-
-To shutdown fig, Ctrl-C it. To shutdown Docker `boot2docker down`.
 
 Heroku setup
 ============
