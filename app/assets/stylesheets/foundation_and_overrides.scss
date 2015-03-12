@@ -1528,9 +1528,12 @@ i { margin: 5px }
 }
  .white-text {
    color: $snow;
+   &:hover {
+     color: $snow;
+   }
  }
 
-.button a {
+.button a, input[type=submit] {
   @extend %chunko-text;
   color: $snow;
 }
@@ -1606,4 +1609,17 @@ i { margin: 5px }
 
 body {
   background-color: $palate1-primary;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  line-height: $topbar-height*2;
+  background-color: $snow;
+  height: auto;
+  border-top: 2px solid $palate1-primary;
+}
+
+.about {
+  padding-bottom: 30px;
 }

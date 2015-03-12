@@ -1,12 +1,30 @@
 class Views::Admin::Admin::Index < Views::Base
-  def content
-    content_for :app_aside do
-      p("I'm on the right side!")
-    end
+  needs :parties
 
+  def content
     full_row {
-      h1("Admin::Admin#index")
-      p("Find me in app/views/admin/admin/index.html.erb")
+      h1("Parties")
+      table {
+        thead {
+          parties.first.attributes.keys.each do |field|
+            th {
+              text field
+            }
+          end
+        }
+        tbody {
+          parties.each do |p|
+            tr {
+              p.attributes.each do |name, value|
+                td {
+                  text value
+                }
+              end
+            }
+          end
+        }
+      }
+      link_to "Download as CSV", url_for(:controller=>'admin', :action=>'index', :format=>:csv), class: "white-text"
     }
   end
 end

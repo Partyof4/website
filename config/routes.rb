@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'logged_out#index'
 
-  get 'profile' => "logged_out#take_action"
+  get 'profile' => "parties#new"
+  resources :parties, only: [:new, :create]
 
   resources :accounts, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
     get '/' => 'admin#index'
     resources :accounts
     resources :roles
-    get '/metrics' => 'metrics#index'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
