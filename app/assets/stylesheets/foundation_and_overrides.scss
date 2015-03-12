@@ -1572,9 +1572,8 @@ i { margin: 5px }
 }
 
 .logo {
-  width: rem-calc(90);
+  width: 84px;
   height: auto;
-  padding: $topbar-height/6 0 $topbar-height/5 0;
   margin-right: 15px;
   max-height: $topbar-height;
 }
@@ -1585,7 +1584,7 @@ i { margin: 5px }
 
 .background-cover {
   background-size: cover;
-  background-image: image-url("http://placekitten.com/g/1440/700");
+  background-image: image-url("background.jpg");
   height: 700px;
 }
 

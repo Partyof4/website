@@ -14,6 +14,7 @@ class Views::Layouts::Raw < Views::Base
         stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato|Slabo+27px'
         javascript_include_tag 'vendor/modernizr'
         javascript_include_tag 'application', 'data-turbolinks-track' => true
+        favicon_link_tag 'po4.ico?v=2'
         csrf_meta_tags
       }
 
@@ -24,7 +25,7 @@ class Views::Layouts::Raw < Views::Base
               li(:class => "name") {
                 h1 {
                   a(:href => "/") {
-                    image_tag "http://placekitten.com/g/90/57", class: "logo", alt: "Partyof4 Logo"
+                    image_tag asset_url("po4_logo.png"), class: "logo", alt: "Partyof4 Logo"
                     text "party of 4"
                   }
                 }
