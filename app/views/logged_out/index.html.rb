@@ -25,7 +25,7 @@ class Views::LoggedOut::Index < Views::Base
       br
       h4 "About Party of 4"
       br
-      img(class: "medium-8 columns", src: asset_path('kevin_and_wendy.jpg'))
+      img(class: "medium-4 columns", src: asset_path('kevin_and_wendy.jpg'))
       p "2014 was a year of change for us. We were faced with an empty nest and a cross-country move. We loved the exhilaration that came with exploring a new city, but we missed the comfort of weekend plans with long-time friends. We needed to build a new circle, populated with other couples who liked to do the things we do. Meetups were fun but mostly full of single people. Striking up conversations at restaurants and cultural events proved hit-or-miss. Our apartment building was full of people our kids' ages."
       p "Surely there are others facing the same challenges, we thought. Wouldn't it be great if there was an easier way, we thought. Wait a minute, maybe there could be, we thought."
       p "We developed Party of 4 to meet those challenges. To help you find new friends in your new home, in your new life. Become your own party of 4. Or 6. Or 8. Bigger circle; larger life."
