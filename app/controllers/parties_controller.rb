@@ -10,6 +10,7 @@ class PartiesController < ApplicationController
     @party = Party.create(party_params)
     if @party.persisted?
       flash[:info] = "Thanks! We'll be in touch"
+      
       redirect_to root_path
     else
       render :new, layout: 'layouts/logged_out'

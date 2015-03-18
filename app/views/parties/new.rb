@@ -4,7 +4,6 @@ class Views::Parties::New < Views::Base
   def content
     wide_row(:'background-cover') {
       form_for(party) do |f|
-
         div(class: %[clear-panel form]) {
           h4 "Create a Profile"
           p "Answering a few quick questions will help us match you with like minded couples in your area!"
@@ -34,7 +33,7 @@ class Views::Parties::New < Views::Base
           div(class: "row") {
             div(class: "medium-12 columns") {
               f.label "When did you arrive?"
-              f.text_field :arrival, placeholder: "March of 2014"
+              date_field_tag :party_arrival, nil, name: "party[arrival]"
             }
           }
           div(class: "row") {

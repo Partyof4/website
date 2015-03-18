@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get '/' => 'admin#index'
     resources :accounts
     resources :roles
+    resources :parties
   end
 
   get '*path' => redirect('/')
