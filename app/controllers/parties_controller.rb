@@ -9,8 +9,9 @@ class PartiesController < ApplicationController
   def create
     @party = Party.create(party_params)
     if @party.persisted?
+      NewPartyMailer.create_new_party_email(@party).deliver
       flash[:info] = "Thanks! We'll be in touch"
-      
+
       redirect_to root_path
     else
       render :new, layout: 'layouts/logged_out'
