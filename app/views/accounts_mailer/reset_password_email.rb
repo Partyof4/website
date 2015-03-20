@@ -12,7 +12,7 @@ class Views::AccountsMailer::ResetPasswordEmail < Views::EmailBase
         }
 
         p {
-          text "We received a request to change your Citizen Code password. To do this, please "
+          text "We received a request to change your Partyof4 password. To do this, please "
           link_to "follow this link", url
           text "."
         }
@@ -21,7 +21,7 @@ class Views::AccountsMailer::ResetPasswordEmail < Views::EmailBase
 
         p "Sincerely,"
 
-        p "Citizen Code"
+        p "Partyof4"
       }
     }
   end

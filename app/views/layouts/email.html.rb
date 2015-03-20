@@ -17,7 +17,7 @@ class Views::Layouts::Email < Views::EmailBase
               wide_row(class: :header) {
                 last_column {
                   td {
-                    span "Citizen Code", class: :logoType
+                    span "Partyof4", class: :logoType
                   }
                 }
               }
