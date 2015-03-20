@@ -1,5 +1,5 @@
 class NewPartyMailer < ActionMailer::Base
-  default from: "parties@partyof4.com"
+  default from: "concierge@partyof4.com"
   layout "email"
 
   def new_party_email(party)
