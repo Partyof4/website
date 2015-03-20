@@ -9,7 +9,7 @@ class Views::Shared::EmailFooter < Views::EmailBase
 
     full_row {
       center_td {
-        div raw("&copy; 2014 Citizen Code, Inc. All Rights Reserved.")
+        div raw("&copy; #{Time.now.year} Partyof4, LLC. All Rights Reserved.")
       }
     }
   end
