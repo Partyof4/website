@@ -33,7 +33,7 @@ class Views::Parties::New < Views::Base
           div(class: "row") {
             div(class: "medium-12 columns") {
               f.label "When did you arrive?"
-              date_field_tag :party_arrival, nil, name: "party[arrival]"
+              f.text_field :arrival, placeholder: "02/15/2015"
             }
           }
           div(class: "row") {
