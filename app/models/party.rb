@@ -1,7 +1,7 @@
 require 'csv'
 
 class Party < ActiveRecord::Base
-  validates :location, presence: true
+  validates_presence_of :location, message: ": must complete 'Where do you live?' section"
 
   def self.as_csv
     CSV.generate do |csv|
