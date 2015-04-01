@@ -14,6 +14,7 @@ class PartiesController < ApplicationController
 
       redirect_to root_path
     else
+      flash.now.alert = @party.errors.full_messages.to_sentence
       render :new, layout: 'layouts/logged_out'
     end
   end

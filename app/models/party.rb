@@ -1,6 +1,8 @@
 require 'csv'
 
 class Party < ActiveRecord::Base
+  validates :location, presence: true
+
   def self.as_csv
     CSV.generate do |csv|
       csv << column_names

@@ -27,7 +27,7 @@ class Views::Parties::New < Views::Base
           div(class: "row") {
             div(class: "medium-12 columns") {
               f.label "Where do you live?"
-              f.text_field :location, placeholder: "Seattle"
+              f.text_field :location, placeholder: "Seattle", required: true
             }
           }
           div(class: "row") {
