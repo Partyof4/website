@@ -1622,3 +1622,10 @@ footer {
 .about {
   padding-bottom: 30px;
 }
+
+.invalid input:required:invalid, .invalid textarea:required:invalid {
+  background: $palate1-alert;
+}
+.invalid input:required:valid, .invalid textarea:required:valid {
+  background: $palate1-primary ;
+}

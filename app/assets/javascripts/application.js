@@ -18,3 +18,18 @@
 // = require_tree .
 
 $(document).ready(function(){ $(document).foundation(); });
+
+function hasHtml5Validation () {
+ return typeof document.createElement('input').checkValidity === 'function';
+}
+
+if (hasHtml5Validation()) {
+ $('form').submit(function (e) {
+   if (!this.checkValidity()) {
+     e.preventDefault();
+     $(this).addClass('invalid');
+   } else {
+     $(this).removeClass('invalid');
+   }
+ });
+}
